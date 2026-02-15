@@ -1,5 +1,14 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Properties from "./pages/Properties";
+
 function App() {
-  return <h1>Real Estate Platform</h1>;
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/properties" element={<Properties />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;
