@@ -7,3 +7,4 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 createRoot(document.getElementById('root')).render(
     <App />
 )
+
