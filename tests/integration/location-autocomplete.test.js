@@ -10,7 +10,8 @@ describe("Location Autocomplete", () => {
   beforeAll(async () => {
     browser = await puppeteer.launch({ headless: false });
     page = await browser.newPage();
-    await page.goto("http://localhost:5173/properties", {
+    // await page.goto("http://localhost:5173/properties", {
+    await page.goto("http://localhost:3006/properties", {
       waitUntil: "networkidle2"
     });
 

@@ -10,7 +10,8 @@ describe("Property List Rendering", () => {
   beforeAll(async () => {
     browser = await puppeteer.launch({ headless: false });
     page = await browser.newPage();
-    await page.goto("http://localhost:5173/properties");
+    // await page.goto("http://localhost:5173/properties");
+    await page.goto("http://localhost:3006/properties")
   });
 
   afterAll(async () => {

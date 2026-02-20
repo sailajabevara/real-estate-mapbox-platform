@@ -10,7 +10,9 @@ describe("Saved Searches Page", () => {
   beforeAll(async () => {
     browser = await puppeteer.launch({ headless: false });
     page = await browser.newPage();
-    await page.goto("http://localhost:5173/saved-searches");
+    // await page.goto("http://localhost:5173/saved-searches");
+    await page.goto("http://localhost:3006/saved-searches")
+
   });
 
   afterAll(async () => {

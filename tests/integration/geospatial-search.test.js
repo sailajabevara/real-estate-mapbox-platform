@@ -10,7 +10,10 @@ describe("Radius Filtering", () => {
   beforeAll(async () => {
     browser = await puppeteer.launch({ headless: false });
     page = await browser.newPage();
-    await page.goto("http://localhost:5173/properties");
+    // await page.goto("http://localhost:5173/properties");
+    await page.goto("http://localhost:3006/properties")
+
+
     await page.waitForSelector('[data-testid="map-loaded"]');
   });
 

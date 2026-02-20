@@ -22,7 +22,8 @@ describe("Map Test", () => {
 
   test("Map loads successfully", async () => {
 
-    await page.goto("http://localhost:5173/properties", {
+    // await page.goto("http://localhost:5173/properties", {
+    await page.goto("http://localhost:3006/properties", {
       waitUntil: "networkidle2"
     });
 
