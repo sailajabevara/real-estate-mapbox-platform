@@ -50,9 +50,11 @@ The application demonstrates:
 - Delete saved search
 - Empty state display when no searches exist
 
----
+
 
 ## 🗂️ Project Structure
+
+----
 real-estate-platform/
 │
 ├── src/
