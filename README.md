@@ -1,4 +1,3 @@
-
 # Real Estate Platform with Mapbox & Puppeteer Integration Tests
 
 ## Project Overview
@@ -50,32 +49,32 @@ The application demonstrates:
 - Delete saved search
 - Empty state display when no searches exist
 
-
+---
 
 ## 🗂️ Project Structure
 
-----
+```
 real-estate-platform/
 │
 ├── src/
-│ ├── components/
-│ ├── pages/
-│ │ ├── Properties.jsx
-│ │ ├── PropertyDetail.jsx
-│ │ └── SavedSearches.jsx
-│ ├── data/
-│ │ ├── properties.json
-│ │ └── amenities.json
-│ └── App.jsx
+│   ├── components/
+│   ├── pages/
+│   │   ├── Properties.jsx
+│   │   ├── PropertyDetail.jsx
+│   │   └── SavedSearches.jsx
+│   ├── data/
+│   │   ├── properties.json
+│   │   └── amenities.json
+│   └── App.jsx
 │
 ├── tests/
-│ └── integration/
-│ ├── map-initialization.test.js
-│ ├── location-autocomplete.test.js
-│ ├── geospatial-search.test.js
-│ ├── map-interactions.test.js
-│ ├── property-filtering.test.js
-│ └── saved-search.test.js
+│   └── integration/
+│       ├── map-initialization.test.js
+│       ├── location-autocomplete.test.js
+│       ├── geospatial-search.test.js
+│       ├── map-interactions.test.js
+│       ├── property-filtering.test.js
+│       └── saved-search.test.js
 │
 ├── docker-compose.yml
 ├── Dockerfile
@@ -83,6 +82,7 @@ real-estate-platform/
 ├── .env.example
 ├── package.json
 └── README.md
+```
 
 ---
 
@@ -95,25 +95,27 @@ The application includes a local mock dataset:
   - San Francisco
   - Los Angeles
   - New York
-- Each property follows the required schema:
-  - id
-  - title
-  - price
-  - address
-  - city
-  - state
-  - zipcode
-  - latitude
-  - longitude
-  - bedrooms
-  - bathrooms
-  - sqft
-  - propertyType
-  - yearBuilt
-  - lotSize
-  - images
-  - description
-  - features
+
+Each property follows the required schema:
+
+- id
+- title
+- price
+- address
+- city
+- state
+- zipcode
+- latitude
+- longitude
+- bedrooms
+- bathrooms
+- sqft
+- propertyType
+- yearBuilt
+- lotSize
+- images
+- description
+- features
 
 An amenities dataset is also included for distance calculation.
 
@@ -123,9 +125,12 @@ An amenities dataset is also included for distance calculation.
 
 Distance between a property and nearby amenities is calculated using the Haversine formula:
 
+```
 distance = R * 2 * atan2(√a, √(1−a))
+```
 
 Where:
+
 - R = 6371 km (Earth radius)
 - a = trigonometric calculation based on latitude and longitude
 
@@ -152,9 +157,12 @@ Test coverage includes:
 
 Test result outputs are generated in:
 
+```
 /test-results/
+```
 
 Required files:
+
 - integration-report.json
 - geospatial-test-summary.json
 - screenshots/ (if failures occur)
@@ -165,12 +173,16 @@ Required files:
 
 Create a `.env` file for development:
 
+```
 VITE_MAPBOX_ACCESS_TOKEN=your_real_mapbox_token
+```
 
 For evaluation/testing, `.env.example` contains:
 
-MAPBOX_ACCESS_TOKEN=pk.test.mock-token-for-testing-purposes  
+```
+MAPBOX_ACCESS_TOKEN=pk.test.mock-token-for-testing-purposes
 MAPBOX_STYLE=mapbox://styles/mapbox/streets-v11
+```
 
 ---
 
@@ -178,19 +190,27 @@ MAPBOX_STYLE=mapbox://styles/mapbox/streets-v11
 
 Install dependencies:
 
+```
 npm install
+```
 
 Build the application:
 
+```
 npm run build
+```
 
 Preview the production build:
 
+```
 npm run preview
+```
 
 Application runs at:
 
+```
 http://localhost:3006
+```
 
 ---
 
@@ -198,19 +218,27 @@ http://localhost:3006
 
 Build and start services:
 
+```
 docker-compose up -d --build
+```
 
 Stop services:
 
+```
 docker-compose down
+```
 
 Run integration tests inside Docker:
 
+```
 docker logs puppeteer-tests
+```
 
 The application will be accessible at:
 
+```
 http://localhost:3006
+```
 
 ---
 
